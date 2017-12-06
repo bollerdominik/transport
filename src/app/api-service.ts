@@ -15,26 +15,26 @@ export class ApiService {
   }
 
   getBusFromHome(): Observable<TransportModel[]> {
-    return this.http.get(URL + 'from=untermattweg&to=Schanzenstrasse&fields[]=connections/from&fields[]=connections/to').map(model =>  {
+    return this.http.get(URL + 'from=untermattweg&to=Schanzenstrasse&limit=3&fields[]=connections/from&fields[]=connections/to').map(model =>  {
       const data = model.json();
       const list = [];
-      list.push(new TransportModel(data.connections[0].from.station.name, data.connections[0].to.station.name,
-        data.connections[0].from.departure, data.connections[0].to.arrival, data.connections[0].from.delay));
-      list.push(new TransportModel(data.connections[1].from.station.name, data.connections[1].to.station.name,
-        data.connections[1].from.departure, data.connections[1].to.arrival, data.connections[1].from.delay));
+      for (const connection of data.connections) {
+        list.push(new TransportModel(connection.from.station.name, connection.to.station.name,
+          connection.from.departure, connection.to.arrival, connection.from.delay));
+      }
       return list;
       }).catch(e => {
         return Observable.throw("error bus");
     });
   }
   getTramFromHome(): Observable<TransportModel[]> {
-    return this.http.get(URL + 'from=Betlehem Säge&to=Hirschengraben&fields[]=connections/from&fields[]=connections/to').map(model =>  {
+    return this.http.get(URL + 'from=Betlehem Säge&to=Hirschengraben&limit=3&fields[]=connections/from&fields[]=connections/to').map(model =>  {
       const data = model.json();
       const list = [];
-      list.push(new TransportModel(data.connections[0].from.station.name, data.connections[0].to.station.name,
-        data.connections[0].from.departure, data.connections[0].to.arrival, data.connections[0].from.delay));
-      list.push(new TransportModel(data.connections[1].from.station.name, data.connections[1].to.station.name,
-        data.connections[1].from.departure, data.connections[1].to.arrival, data.connections[1].from.delay));
+      for (const connection of data.connections) {
+        list.push(new TransportModel(connection.from.station.name, connection.to.station.name,
+          connection.from.departure, connection.to.arrival, connection.from.delay));
+      }
       return list;
     }).catch(e => {
       return Observable.throw("error tram");
@@ -49,6 +49,9 @@ export class ApiService {
           list.push(new TransportModel(connection.from.station.name, connection.to.station.name,
             connection.from.departure, connection.to.arrival, connection.from.delay));
         }
+        if (list.length === 2) {
+          return list;
+        }
       }
       return list;
     }).catch(e => {
@@ -56,26 +59,26 @@ export class ApiService {
     });
   }
   getBusFromBern(): Observable<TransportModel[]> {
-    return this.http.get(URL + 'from=Schanzenstrasse&to=untermattweg&fields[]=connections/from&fields[]=connections/to').map(model =>  {
+    return this.http.get(URL + 'from=Schanzenstrasse&to=untermattweg&limit=3&fields[]=connections/from&fields[]=connections/to').map(model =>  {
       const data = model.json();
       const list = [];
-      list.push(new TransportModel(data.connections[0].from.station.name, data.connections[0].to.station.name,
-        data.connections[0].from.departure, data.connections[0].to.arrival, data.connections[0].from.delay));
-      list.push(new TransportModel(data.connections[1].from.station.name, data.connections[1].to.station.name,
-        data.connections[1].from.departure, data.connections[1].to.arrival, data.connections[1].from.delay));
+      for (const connection of data.connections) {
+        list.push(new TransportModel(connection.from.station.name, connection.to.station.name,
+          connection.from.departure, connection.to.arrival, connection.from.delay));
+      }
       return list;
     }).catch(e => {
       return Observable.throw("error bus");
     });
   }
   getTramFromBern(): Observable<TransportModel[]> {
-    return this.http.get(URL + 'from=Hirschengraben&to=Betlehem Säge&fields[]=connections/from&fields[]=connections/to').map(model =>  {
+    return this.http.get(URL + 'from=Hirschengraben&to=Betlehem Säge&limit=3&fields[]=connections/from&fields[]=connections/to').map(model =>  {
       const data = model.json();
       const list = [];
-      list.push(new TransportModel(data.connections[0].from.station.name, data.connections[0].to.station.name,
-        data.connections[0].from.departure, data.connections[0].to.arrival, data.connections[0].from.delay));
-      list.push(new TransportModel(data.connections[1].from.station.name, data.connections[1].to.station.name,
-        data.connections[1].from.departure, data.connections[1].to.arrival, data.connections[1].from.delay));
+      for (const connection of data.connections) {
+        list.push(new TransportModel(connection.from.station.name, connection.to.station.name,
+          connection.from.departure, connection.to.arrival, connection.from.delay));
+      }
       return list;
     }).catch(e => {
       return Observable.throw("error tram");
@@ -89,6 +92,9 @@ export class ApiService {
         if (connection.from.station.name === "Bern") {
           list.push(new TransportModel(connection.from.station.name, connection.to.station.name,
             connection.from.departure, connection.to.arrival, connection.from.delay));
+          if (list.length === 2) {
+            return list;
+          }
         }
       }
       return list;

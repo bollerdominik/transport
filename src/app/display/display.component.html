@@ -4,18 +4,10 @@
     <div class="row">
       <h3>Bus</h3>
     </div>
-    <div class="row">
+    <div class="row" *ngFor="let element of busListFromBern">
       <ul class="list-group">
-        <li class="list-group-item">From: {{busListFromBern[0].from}} @ {{busListFromBern[0].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{busListFromBern[0].to}} @ {{busListFromBern[0].toTime | date:'shortTime'}}</li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul class="list-group">
-        <li class="list-group-item">From: {{busListFromBern[1].from}} @ {{busListFromBern[1].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{busListFromBern[1].to}} @ {{busListFromBern[1].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{element.from}} @ {{element.fromTime | date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{element.to}} @ {{element.toTime | date:'shortTime'}}</li>
       </ul>
     </div>
   </div>
@@ -23,18 +15,10 @@
     <div class="row">
       <h3>Tram</h3>
     </div>
-    <div class="row">
+    <div class="row" *ngFor="let element of tramListFromBern">
       <ul class="list-group">
-        <li class="list-group-item">From: {{tramListFromBern[0].from}} @ {{tramListFromBern[0].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{tramListFromBern[0].to}} @ {{tramListFromBern[0].toTime | date:'shortTime'}}</li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul class="list-group">
-        <li class="list-group-item">From: {{tramListFromBern[1].from}} @ {{tramListFromBern[1].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{tramListFromBern[1].to}} @ {{tramListFromBern[1].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{element.from}} @ {{element.fromTime | date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{element.to}} @ {{element.toTime | date:'shortTime'}}</li>
       </ul>
     </div>
   </div>
@@ -42,18 +26,10 @@
     <div class="row">
       <h3>Train</h3>
     </div>
-    <div class="row">
+    <div class="row" *ngFor="let element of trainListFromBern">
       <ul class="list-group">
-        <li class="list-group-item">From: {{trainListFromBern[0].from}} @ {{trainListFromBern[0].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{trainListFromBern[0].to}} @ {{trainListFromBern[0].toTime | date:'shortTime'}}</li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul class="list-group">
-        <li class="list-group-item">From: {{trainListFromBern[1].from}} @ {{trainListFromBern[1].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{trainListFromBern[1].to}} @ {{trainListFromBern[1].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{element.from}} @ {{element.fromTime | date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{element.to}} @ {{element.toTime | date:'shortTime'}}</li>
       </ul>
     </div>
   </div>
@@ -64,18 +40,10 @@
     <div class="row">
       <h3>Bus</h3>
     </div>
-    <div class="row">
+    <div class="row" *ngFor="let element of busListFromHome">
       <ul class="list-group">
-        <li class="list-group-item">From: {{busListFromHome[0].from}} @ {{busListFromHome[0].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{busListFromHome[0].to}} @ {{busListFromHome[0].toTime | date:'shortTime'}}</li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul class="list-group">
-        <li class="list-group-item">From: {{busListFromHome[1].from}} @ {{busListFromHome[1].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{busListFromHome[1].to}} @ {{busListFromHome[1].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{element.from}} @ {{element.fromTime | date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{element.to}} @ {{element.toTime | date:'shortTime'}}</li>
       </ul>
     </div>
   </div>
@@ -83,18 +51,10 @@
     <div class="row">
       <h3>Tram</h3>
     </div>
-    <div class="row">
+    <div class="row" *ngFor="let element of tramListFromHome">
       <ul class="list-group">
-        <li class="list-group-item">From: {{tramListFromHome[0].from}} @ {{tramListFromHome[0].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{tramListFromHome[0].to}} @ {{tramListFromHome[0].toTime | date:'shortTime'}}</li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul class="list-group">
-        <li class="list-group-item">From: {{tramListFromHome[1].from}} @ {{tramListFromHome[1].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{tramListFromHome[1].to}} @ {{tramListFromHome[1].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{element.from}} @ {{element.fromTime | date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{element.to}} @ {{element.toTime | date:'shortTime'}}</li>
       </ul>
     </div>
   </div>
@@ -102,18 +62,10 @@
     <div class="row">
       <h3>Train</h3>
     </div>
-    <div class="row">
+    <div class="row" *ngFor="let element of trainListFromHome">
       <ul class="list-group">
-        <li class="list-group-item">From: {{trainListFromHome[0].from}} @ {{trainListFromHome[0].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{trainListFromHome[0].to}} @ {{trainListFromHome[0].toTime | date:'shortTime'}}</li>
-      </ul>
-    </div>
-    <div class="row">
-      <ul class="list-group">
-        <li class="list-group-item">From: {{trainListFromHome[1].from}} @ {{trainListFromHome[1].fromTime |
-          date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{trainListFromHome[1].to}} @ {{trainListFromHome[1].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{element.from}} @ {{element.fromTime | date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{element.to}} @ {{element.toTime | date:'shortTime'}}</li>
       </ul>
     </div>
   </div>
