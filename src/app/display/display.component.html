@@ -1,96 +1,120 @@
-<h2>To Bern From Home</h2>
+<h2>From Bern</h2>
 <div class="container">
-  <div class="entry" *ngIf="busList">
+  <div class="entry" *ngIf="busListFromBern">
     <div class="row">
       <h3>Bus</h3>
     </div>
     <div class="row">
       <ul class="list-group">
-        <li class="list-group-item">From: {{busList[0].from}} @ {{busList[0].fromTime | date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{busList[0].to}} @ {{busList[0].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{busListFromBern[0].from}} @ {{busListFromBern[0].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{busListFromBern[0].to}} @ {{busListFromBern[0].toTime | date:'shortTime'}}</li>
       </ul>
     </div>
     <div class="row">
       <ul class="list-group">
-        <li class="list-group-item">From: {{busList[1].from}} @ {{busList[1].fromTime | date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{busList[1].to}} @ {{busList[1].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{busListFromBern[1].from}} @ {{busListFromBern[1].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{busListFromBern[1].to}} @ {{busListFromBern[1].toTime | date:'shortTime'}}</li>
       </ul>
     </div>
   </div>
-  <div class="entry" *ngIf="tramList">
+  <div class="entry" *ngIf="tramListFromBern">
     <div class="row">
       <h3>Tram</h3>
     </div>
     <div class="row">
       <ul class="list-group">
-        <li class="list-group-item">From: {{tramList[0].from}} @ {{tramList[0].fromTime | date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{tramList[0].to}} @ {{tramList[0].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{tramListFromBern[0].from}} @ {{tramListFromBern[0].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{tramListFromBern[0].to}} @ {{tramListFromBern[0].toTime | date:'shortTime'}}</li>
       </ul>
     </div>
     <div class="row">
       <ul class="list-group">
-        <li class="list-group-item">From: {{tramList[1].from}} @ {{tramList[1].fromTime | date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{tramList[1].to}} @ {{tramList[1].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{tramListFromBern[1].from}} @ {{tramListFromBern[1].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{tramListFromBern[1].to}} @ {{tramListFromBern[1].toTime | date:'shortTime'}}</li>
       </ul>
     </div>
   </div>
-  <div class="entry" *ngIf="trainList">
+  <div class="entry" *ngIf="trainListFromBern">
     <div class="row">
       <h3>Train</h3>
     </div>
     <div class="row">
       <ul class="list-group">
-        <li class="list-group-item">From: {{trainList[0].from}} @ {{trainList[0].fromTime | date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{trainList[0].to}} @ {{trainList[0].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{trainListFromBern[0].from}} @ {{trainListFromBern[0].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{trainListFromBern[0].to}} @ {{trainListFromBern[0].toTime | date:'shortTime'}}</li>
       </ul>
     </div>
     <div class="row">
       <ul class="list-group">
-        <li class="list-group-item">From: {{trainList[1].from}} @ {{trainList[1].fromTime | date:'shortTime'}}</li>
-        <li class="list-group-item">To: {{trainList[1].to}} @ {{trainList[1].toTime | date:'shortTime'}}</li>
+        <li class="list-group-item">From: {{trainListFromBern[1].from}} @ {{trainListFromBern[1].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{trainListFromBern[1].to}} @ {{trainListFromBern[1].toTime | date:'shortTime'}}</li>
       </ul>
     </div>
   </div>
 </div>
-<!--<h2>To Home From Bern</h2>-->
-<!--<div class="container">-->
-  <!--<div class="entry">-->
-    <!--<div class="row">-->
-      <!--<h3>Bus</h3>-->
-    <!--</div>-->
-    <!--<div class="row">-->
-      <!--<ul class="list-group">-->
-        <!--<li class="list-group-item">From: {{busList[0].from}} @ {{busList[0].fromTime | date:'shortTime'}}</li>-->
-        <!--<li class="list-group-item">To: {{busList[0].to}} @ {{busList[0].toTime | date:'shortTime'}}</li>-->
-      <!--</ul>-->
-    <!--</div>-->
-    <!--<div class="row">-->
-      <!--<ul class="list-group">-->
-        <!--<li class="list-group-item">From: {{busList[1].from}} @ {{busList[1].fromTime | date:'shortTime'}}</li>-->
-        <!--<li class="list-group-item">To: {{busList[1].to}} @ {{busList[1].toTime | date:'shortTime'}}</li>-->
-      <!--</ul>-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--<div class="entry">-->
-    <!--<div class="row">-->
-      <!--<h3>Tram</h3>-->
-    <!--</div>-->
-    <!--<div class="row">-->
-      <!--<ul class="list-group">-->
-        <!--<li class="list-group-item">From: Untermatweg @ 12:12</li>-->
-        <!--<li class="list-group-item">To: Schanzenstrasse @ 14:22</li>-->
-      <!--</ul>-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--<div class="entry">-->
-    <!--<div class="row">-->
-      <!--<h3>Train</h3>-->
-    <!--</div>-->
-    <!--<div class="row">-->
-      <!--<ul class="list-group">-->
-        <!--<li class="list-group-item">From: Untermatweg @ 12:12</li>-->
-        <!--<li class="list-group-item">To: Schanzenstrasse @ 14:22</li>-->
-      <!--</ul>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
+<h2>From Home</h2>
+<div class="container">
+  <div class="entry" *ngIf="busListFromHome">
+    <div class="row">
+      <h3>Bus</h3>
+    </div>
+    <div class="row">
+      <ul class="list-group">
+        <li class="list-group-item">From: {{busListFromHome[0].from}} @ {{busListFromHome[0].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{busListFromHome[0].to}} @ {{busListFromHome[0].toTime | date:'shortTime'}}</li>
+      </ul>
+    </div>
+    <div class="row">
+      <ul class="list-group">
+        <li class="list-group-item">From: {{busListFromHome[1].from}} @ {{busListFromHome[1].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{busListFromHome[1].to}} @ {{busListFromHome[1].toTime | date:'shortTime'}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="entry" *ngIf="tramListFromHome">
+    <div class="row">
+      <h3>Tram</h3>
+    </div>
+    <div class="row">
+      <ul class="list-group">
+        <li class="list-group-item">From: {{tramListFromHome[0].from}} @ {{tramListFromHome[0].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{tramListFromHome[0].to}} @ {{tramListFromHome[0].toTime | date:'shortTime'}}</li>
+      </ul>
+    </div>
+    <div class="row">
+      <ul class="list-group">
+        <li class="list-group-item">From: {{tramListFromHome[1].from}} @ {{tramListFromHome[1].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{tramListFromHome[1].to}} @ {{tramListFromHome[1].toTime | date:'shortTime'}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="entry" *ngIf="trainListFromHome">
+    <div class="row">
+      <h3>Train</h3>
+    </div>
+    <div class="row">
+      <ul class="list-group">
+        <li class="list-group-item">From: {{trainListFromHome[0].from}} @ {{trainListFromHome[0].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{trainListFromHome[0].to}} @ {{trainListFromHome[0].toTime | date:'shortTime'}}</li>
+      </ul>
+    </div>
+    <div class="row">
+      <ul class="list-group">
+        <li class="list-group-item">From: {{trainListFromHome[1].from}} @ {{trainListFromHome[1].fromTime |
+          date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{trainListFromHome[1].to}} @ {{trainListFromHome[1].toTime | date:'shortTime'}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
