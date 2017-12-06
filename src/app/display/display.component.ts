@@ -18,9 +18,9 @@ export class DisplayComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.getBus().subscribe(data => this.busList = data);
-    this.apiService.getTram().subscribe(data => this.tramList = data);
-    this.apiService.getTrain().subscribe(data => this.trainList = data);
+    this.apiService.getBusFromHome().subscribe(data => this.busList = data);
+    this.apiService.getTramFromHome().subscribe(data => this.tramList = data);
+    this.apiService.getTrainFromHome().subscribe(data => this.trainList = data);
 
   }
 

@@ -14,7 +14,7 @@ export class ApiService {
   constructor(private http: Http) {
   }
 
-  getBus(): Observable<TransportModel[]> {
+  getBusFromHome(): Observable<TransportModel[]> {
     return this.http.get(URL + 'from=untermattweg&to=Schanzenstrasse&fields[]=connections/from&fields[]=connections/to').map(model =>  {
       const data = model.json();
       const list = [];
@@ -27,7 +27,7 @@ export class ApiService {
         return Observable.throw("error bus");
     });
   }
-  getTram(): Observable<TransportModel[]> {
+  getTramFromHome(): Observable<TransportModel[]> {
     return this.http.get(URL + 'from=Betlehem Säge&to=Hirschengraben&fields[]=connections/from&fields[]=connections/to').map(model =>  {
       const data = model.json();
       const list = [];
@@ -40,7 +40,7 @@ export class ApiService {
       return Observable.throw("error tram");
     });
   }
-  getTrain(): Observable<TransportModel[]> {
+  getTrainFromHome(): Observable<TransportModel[]> {
     return this.http.get(URL + 'from=Stöckacker&to=Bern&limit=6&fields[]=connections/from&fields[]=connections/to').map(model =>  {
       const data = model.json();
       const list = [];
