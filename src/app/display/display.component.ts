@@ -10,11 +10,14 @@ import {TransportModel} from "../transport.model";
 export class DisplayComponent implements OnInit {
 
   public busList: TransportModel[];
+  public tramList: TransportModel[];
+
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.apiService.getBus().subscribe(data => this.busList = data);
+    this.apiService.getTram().subscribe(data => this.tramList = data);
   }
 
 }

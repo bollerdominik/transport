@@ -1,5 +1,6 @@
+<h2>To Bern From Home</h2>
 <div class="container">
-  <div class="entry">
+  <div class="entry" *ngIf="busList">
     <div class="row">
       <h3>Bus</h3>
     </div>
@@ -22,8 +23,14 @@
     </div>
     <div class="row">
       <ul class="list-group">
-        <li class="list-group-item">From: Untermatweg @ 12:12</li>
-        <li class="list-group-item">To: Schanzenstrasse @ 14:22</li>
+        <li class="list-group-item">From: {{tramList[0].from}} @ {{tramList[0].fromTime | date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{tramList[0].to}} @ {{tramList[0].toTime | date:'shortTime'}}</li>
+      </ul>
+    </div>
+    <div class="row">
+      <ul class="list-group">
+        <li class="list-group-item">From: {{tramList[1].from}} @ {{tramList[1].fromTime | date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{tramList[1].to}} @ {{tramList[1].toTime | date:'shortTime'}}</li>
       </ul>
     </div>
   </div>
@@ -39,3 +46,45 @@
     </div>
   </div>
 </div>
+<!--<h2>To Home From Bern</h2>-->
+<!--<div class="container">-->
+  <!--<div class="entry">-->
+    <!--<div class="row">-->
+      <!--<h3>Bus</h3>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<ul class="list-group">-->
+        <!--<li class="list-group-item">From: {{busList[0].from}} @ {{busList[0].fromTime | date:'shortTime'}}</li>-->
+        <!--<li class="list-group-item">To: {{busList[0].to}} @ {{busList[0].toTime | date:'shortTime'}}</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<ul class="list-group">-->
+        <!--<li class="list-group-item">From: {{busList[1].from}} @ {{busList[1].fromTime | date:'shortTime'}}</li>-->
+        <!--<li class="list-group-item">To: {{busList[1].to}} @ {{busList[1].toTime | date:'shortTime'}}</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class="entry">-->
+    <!--<div class="row">-->
+      <!--<h3>Tram</h3>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<ul class="list-group">-->
+        <!--<li class="list-group-item">From: Untermatweg @ 12:12</li>-->
+        <!--<li class="list-group-item">To: Schanzenstrasse @ 14:22</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class="entry">-->
+    <!--<div class="row">-->
+      <!--<h3>Train</h3>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<ul class="list-group">-->
+        <!--<li class="list-group-item">From: Untermatweg @ 12:12</li>-->
+        <!--<li class="list-group-item">To: Schanzenstrasse @ 14:22</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
