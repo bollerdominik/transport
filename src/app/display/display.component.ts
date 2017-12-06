@@ -11,6 +11,8 @@ export class DisplayComponent implements OnInit {
 
   public busList: TransportModel[];
   public tramList: TransportModel[];
+  public trainList: TransportModel[];
+
 
 
   constructor(private apiService: ApiService) { }
@@ -18,6 +20,8 @@ export class DisplayComponent implements OnInit {
   ngOnInit() {
     this.apiService.getBus().subscribe(data => this.busList = data);
     this.apiService.getTram().subscribe(data => this.tramList = data);
+    this.apiService.getTrain().subscribe(data => this.trainList = data);
+
   }
 
 }

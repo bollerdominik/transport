@@ -17,7 +17,7 @@
       </ul>
     </div>
   </div>
-  <div class="entry">
+  <div class="entry" *ngIf="tramList">
     <div class="row">
       <h3>Tram</h3>
     </div>
@@ -34,14 +34,20 @@
       </ul>
     </div>
   </div>
-  <div class="entry">
+  <div class="entry" *ngIf="trainList">
     <div class="row">
       <h3>Train</h3>
     </div>
     <div class="row">
       <ul class="list-group">
-        <li class="list-group-item">From: Untermatweg @ 12:12</li>
-        <li class="list-group-item">To: Schanzenstrasse @ 14:22</li>
+        <li class="list-group-item">From: {{trainList[0].from}} @ {{trainList[0].fromTime | date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{trainList[0].to}} @ {{trainList[0].toTime | date:'shortTime'}}</li>
+      </ul>
+    </div>
+    <div class="row">
+      <ul class="list-group">
+        <li class="list-group-item">From: {{trainList[1].from}} @ {{trainList[1].fromTime | date:'shortTime'}}</li>
+        <li class="list-group-item">To: {{trainList[1].to}} @ {{trainList[1].toTime | date:'shortTime'}}</li>
       </ul>
     </div>
   </div>
